@@ -7,9 +7,15 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, 'dist')));
 
-app.get('/home', (req, res) => {
+app.get('/desktop', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'home', 'index.html'));
 });
+
+/* 
+
+add a user system that will login
+
+*/
 
 const server = http.createServer(app);
 server.listen(port, () => {
